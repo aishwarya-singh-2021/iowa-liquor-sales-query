@@ -1,4 +1,4 @@
-## Iowa Sales Query
+## Iowa Liquor Sales Query
 >To showcase the working of joins, I have divided this dataset into three datasets namely sales,store and item. 
 >Use the Data fetch code for creating these three tables.
 
