@@ -1,4 +1,4 @@
-## iowa sales Query
+## Iowa Sales Query
 >To showcase the joins I have divided this dataset into three datasets namely sales data,store data and item data. Use the Data fetch code for this table creation.
 
 ## Data Fetch
@@ -20,14 +20,14 @@ FROM `bigquery-public-data.iowa_liquor_sales.sales`
 GROUP BY item_number
 
 ## Questions
-#### How many stores in a city?
+### Q.1-How many stores in a city?
 
 SELECT * FROM `assignment-29th-august-cbd.iowa_liquor_sales.store`
 SELECT city, COUNT(store_number)
 FROM `assignment-29th-august-cbd.iowa_liquor_sales.store`
 GROUP BY city
 
-#### What are the sales of a city?
+### Q.2-What are the sales of a city?
 
 SELECT store.city, SUM(sales.sale_dollars) AS total_sales
 FROM `assignment-29th-august-cbd.iowa_liquor_sales.store` AS store
@@ -36,7 +36,7 @@ USING (store_number)
 GROUP BY store.city
 ORDER BY total_sales desc  
 
-#### Sales/Store ratio in a city
+### Q.3-Sales/Store ratio in a city
 SELECT city, total_stores as stores, total_sales/total_stores AS sales_per_store
 FROM
     (
@@ -50,7 +50,7 @@ FROM
     )
 ORDER BY sales_per_store desc
 
-## What are the sales of an item category
+### Q.4-What are the sales of an item category
 SELECT item.category_id, item.category, 
         SUM(sales.bottles_sold) AS bottles,
         SUM(sales.sale_dollars)/100000 AS total_sales
