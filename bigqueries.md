@@ -20,14 +20,14 @@ FROM `bigquery-public-data.iowa_liquor_sales.sales`
 GROUP BY item_number
 
 ## Questions
-## How many stores in a city?
+#### How many stores in a city?
 
 SELECT * FROM `assignment-29th-august-cbd.iowa_liquor_sales.store`
 SELECT city, COUNT(store_number)
 FROM `assignment-29th-august-cbd.iowa_liquor_sales.store`
 GROUP BY city
 
-## What are the sales of a city?
+#### What are the sales of a city?
 
 SELECT store.city, SUM(sales.sale_dollars) AS total_sales
 FROM `assignment-29th-august-cbd.iowa_liquor_sales.store` AS store
@@ -36,7 +36,7 @@ USING (store_number)
 GROUP BY store.city
 ORDER BY total_sales desc  
 
-## Sales/Store ratio in a city
+#### Sales/Store ratio in a city
 SELECT city, total_stores as stores, total_sales/total_stores AS sales_per_store
 FROM
     (
