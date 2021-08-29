@@ -3,8 +3,8 @@
 >Use the Data fetch code for creating these three tables.
 
 ## Data Fetch
-SELECT invoice_and_item_number, date, store_number, item_number, state_bottle_cost as cost, state_bottle_retail as retail, bottles_sold, sale_dollars, volume_sold_liters, volume_sold_gallons
-FROM `bigquery-public-data.iowa_liquor_sales.sales`
+        SELECT invoice_and_item_number, date, store_number, item_number, state_bottle_cost as cost, state_bottle_retail as retail, bottles_sold, sale_dollars, volume_sold_liters, volume_sold_gallons
+        FROM `bigquery-public-data.iowa_liquor_sales.sales`
 
 SELECT store_number,
         MIN(store_name) AS name, MIN(address) as address, MIN(city) as city, 
