@@ -20,6 +20,9 @@ SELECT item_number,
 FROM `bigquery-public-data.iowa_liquor_sales.sales`
 GROUP BY item_number
 
+## Objective
+>A new store has to be opened. For this, most prefrrable cities and most prefrrable type of items in those cities should be researched upon. Let us try to answer some questions to fulfill this objective.
+
 ## Questions
 ### Q.1-How many stores in a city?
 
