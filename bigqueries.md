@@ -1,5 +1,6 @@
 ## Iowa Sales Query
->To showcase the joins I have divided this dataset into three datasets namely sales data,store data and item data. Use the Data fetch code for this table creation.
+>To showcase the working of joins, I have divided this dataset into three datasets namely sales,store and item. 
+>Use the Data fetch code for creating these three tables.
 
 ## Data Fetch
 SELECT invoice_and_item_number, date, store_number, item_number, state_bottle_cost as cost, state_bottle_retail as retail, bottles_sold, sale_dollars, volume_sold_liters, volume_sold_gallons
