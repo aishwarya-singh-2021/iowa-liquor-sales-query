@@ -60,3 +60,6 @@ SELECT item.category_id, item.category,
     USING (item_number)
     GROUP BY  item.category_id, item.category
     ORDER BY  total_sales DESC
+    
+### Q.5-What is the most preferred item category in a city?
+
